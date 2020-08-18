@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite" parallel="classes">
+    <test verbose="2" preserve-order="true" name="chrometests">
+        <parameter name="browser" value="chrome"></parameter>
+        <classes>
+            <class name="testCases.LoginTest">
+                <methods>
+                    <include name="loginTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+        <test verbose="2" preserve-order="true" name="firefoxtests">
+            <parameter name="browser" value="firefox"></parameter>
+        <classes>
+            <class name="testCases.LoginTest">
+                <methods>
+                    <include name="loginTest"/>
+                </methods>
+            </class>
+        </classes>
+    </test>
+</suite>
